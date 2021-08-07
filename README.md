@@ -18,11 +18,10 @@ npm install
 ```sh
 npm start
 ```
-<p>The browser will open automatically and you'll see our home page. There's a seed file that loads 75 books, 4 users and 1 admin.
-</br>
-If you wish to login as the admin, his credentials are:
-</br> username: "martin" </br> password: "Hola123123"
-</p>
+> The browser will open automatically and you'll see our home page.
+> There's a seed file that loads 75 books, 4 users and 1 admin.
+> If you wish to login as the admin, his credentials are:
+> username: "martin" password: "Hola123123"
 
 ## Authors
 
