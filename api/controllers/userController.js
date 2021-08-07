@@ -3,6 +3,7 @@ const { col, Op } = require("sequelize");
 const jwt = require("jsonwebtoken");
 
 module.exports = {
+
   user_register: function (req, res) {
     User.create(req.body)
       .then((user) => {
@@ -76,4 +77,5 @@ module.exports = {
       res.send(user.dataValues);
     });
   },
+  
 };

@@ -3,31 +3,28 @@ const router = express.Router();
 const checkJWT = require("../middlewares/jwt");
 const userController = require('../controllers/userController')
 
-//Creamos un usuario
+//creates a new user
 router.post("/register", userController.user_register)
 
-//Logueamos un usuario
+//login existing user
 router.post("/login", userController.user_login)
 
-//Se devuelven todas la ordenes que con bought: false
+//gets user's cart
 router.get("/:userId/cart", checkJWT, userController.user_getCart)
 
-//Devuelve un usuario por id
+//gets user by its ID
 router.get("/user/:userId", checkJWT, userController.user_getUserByPk)
 
-//Se checkean las ordenes en false a true
+//gets user's old orders
 router.get("/:userId/checked", checkJWT, userController.user_checkoutOrder) 
 
-//Devuelve todos los users
+//gets all users
 router.get("/all/:userId", checkJWT, userController.user_getAllUsers) 
 
-//Borramos un usuario
+//deteles a user
 router.delete("/", checkJWT, userController.user_delete)
 
-//Actualizamos la propiedad admin de un usuario
-//router.put("/profile/:id", checkJWT, userController.user_changeAdminProperty)
-
-//sólo cambia el campo isAdmin
+//toggles user's isAdmin bool property
 router.put("/toggleAdmin", checkJWT, userController.user_toggleAdminStatus)
 
 module.exports = router;

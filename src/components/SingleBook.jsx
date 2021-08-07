@@ -5,7 +5,7 @@ import { setSingleBook } from "../store/singleBook";
 import ratingStars from "../hooks/ratingStars";
 import "../styles/SingleBook.css";
 
-const SingleBook = ({ singleBook, addOrder, rating }) => {
+const SingleBook = ({ singleBook, addToCart, rating }) => {
   const { isAdmin } = useSelector((store) => store.user);
 
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const SingleBook = ({ singleBook, addOrder, rating }) => {
       <div className="addToCartEditButton">
         <div className="boton">
           <button
-            onClick={() => addOrder(singleBook.id)}
+            onClick={() => addToCart(singleBook.id)}
             className="singleBookButtons"
           >
             Add to cart

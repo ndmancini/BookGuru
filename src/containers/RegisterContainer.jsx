@@ -18,30 +18,21 @@ const RegisterContainer = () => {
   const [emailValidator, setEmailValidator] = React.useState(true);
 
   const handleChange = (e) => {
-    e.preventDefault();
-    const key = e.target.name;
-    const value = e.target.value;
-    setInputRegistro({ ...inputRegistro, [key]: value });
+    setInputRegistro({ ...inputRegistro, [e.target.name]: e.target.value });
   };
 
   const handlerBlur = (e) => {
     if (e.target.name === "email") {
-      let result = /(?=.*@)(?=.*\.).{8,}/.test(e.target.value);
+      const result = /(?=.*@)(?=.*\.).{8,}/.test(e.target.value);
       setInputRegistro({ ...inputRegistro, email: e.target.value });
-      if (result) {
-        setEmailValidator(true);
-      } else {
-        setEmailValidator(false);
-      }
+      if (result) setEmailValidator(true);
+      else setEmailValidator(false);
     }
     if (e.target.name === "password") {
-      let result = /(^[A-Z])(?=.*\d).{6,}/.test(e.target.value);
+      const result = /(^[A-Z])(?=.*\d).{6,}/.test(e.target.value);
       setInputRegistro({ ...inputRegistro, password: e.target.value });
-      if (result) {
-        setPasswordValidator(true);
-      } else {
-        setPasswordValidator(false);
-      }
+      if (result) setPasswordValidator(true);
+      else setPasswordValidator(false);
     }
   };
 
@@ -74,9 +65,8 @@ const RegisterContainer = () => {
                 lastname: response.last_name,
                 password: process.env.REACT_APP_PASSWORD_FB,
               };
-              if (!user.username) {
-                return;
-              }
+              if (!user.username)return;
+              
               return axios.post("/api/users/register", user).then((res) => {
                 dispatch(setUser(res.data.user));
                 localStorage.setItem("token", JSON.stringify(res.data.token));

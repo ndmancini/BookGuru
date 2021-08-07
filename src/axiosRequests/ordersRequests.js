@@ -9,7 +9,7 @@ export function getAllOrders() {
   });
 }
 
-export function addOrderAxios(bookId, userId) {
+export function addToCartAxios(bookId, userId) {
   const token = JSON.parse(localStorage.getItem("token"));
 
   axios({

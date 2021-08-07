@@ -3,7 +3,7 @@ const router = express.Router();
 const checkJWT = require("../middlewares/jwt");
 const orderController = require("../controllers/orderController");
 
-router.get("/", checkJWT, orderController.user_validation);
+// router.get("/", checkJWT, orderController.user_validation);
 
 //Ruta para traer todas las ordenes
 router.get("/all", checkJWT, orderController.user_validation);

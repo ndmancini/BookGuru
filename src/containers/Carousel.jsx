@@ -3,19 +3,18 @@ import { getRandomBooks } from "../axiosRequests/booksRequests";
 import Carousel from "react-bootstrap/Carousel";
 import "../styles/Carousel.css";
 
-const Carousel1 = () => {
+const Carousel1 = ({ title, info }) => {
   const [rndBooks, setRndBooks] = React.useState([]);
 
   useEffect(() => {
-    getRandomBooks().then(({ data }) => setRndBooks(data));
+    getRandomBooks(24).then(({ data }) => setRndBooks(data));
   }, []);
 
   return (
     <div className="car">
       <div>
-        <h6>Latest Releases</h6>
-        Discover the very latest titles from the worlds of fiction, non-fiction
-        and children’s. These great volumes are all out now.
+        <h6>{title}</h6>
+        <p>{info}</p>
         <Carousel>
           <Carousel.Item>
             <div className="slideImagediv">
@@ -43,7 +42,7 @@ const Carousel1 = () => {
             <div className="slideImagediv">
               {rndBooks &&
                 rndBooks.map((book, index) => {
-                  return index > 15 && index < 23 ? (
+                  return index > 15 && index < 24 ? (
                     <img src={book.img} alt="..." key={book.id}/>
                   ) : null;
                 })}

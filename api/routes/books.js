@@ -8,8 +8,8 @@ const router = express.Router();
 //Creamos un libro
 router.post("/", bookController.book_create);
 
-//Devolvemos 10 libros random
-router.get("/home", bookController.book_getRandomBooks);
+//Devolvemos 'n' libros random
+router.get("/random/:n", bookController.book_getRandomBooks);
 
 //Devolvemos un book por PK
 router.get("/id/:id", bookController.book_getById);
@@ -24,7 +24,7 @@ router.get("/author/:author", bookController.book_getByAuthor);
 router.get("/category/:category", bookController.book_getByCategory);
 
 //Devolvemos los libros relacionados con el autor y categoria
-router.get("/authorTitle/:authorTitle", bookController.book_getByAuthorCategory);
+router.get("/author_title/:author_title", bookController.book_getByAuthorCategory);
 
 //Borramos un libro por PK
 router.delete("/id/:id", checkJWT, bookController.book_delete);

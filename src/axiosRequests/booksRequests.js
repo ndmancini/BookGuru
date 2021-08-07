@@ -4,20 +4,20 @@ export function getSingleBook(bookId) {
   return axios.get(`/api/books/id/${bookId}`);
 }
 
-export function getBookByTitle(input) {
-  return axios.get(`/api/books/title/${input}`);
+export function getBooksByAuthorOrTitle(input) {
+  return axios.get(`/api/books/author_title/${input}`);
 }
 
-export function getBookByAuthorOrTitle(input) {
-  return axios.get(`/api/books/authorTitle/${input}`);
-}
-
-export function getRandomBooks() {
-  return axios.get(`/api/books/home`);
+export function getRandomBooks(num) {
+  return axios.get(`/api/books/random/${num}`);
 }
 
 export function getBooksByCategory(category) {
   return axios.get(`/api/books/category/${category}`);
+}
+
+export function getBookRatingAxios(bookId) {
+  return axios.get(`/api/books/ratings/${bookId}`);
 }
 
 export function updateSingleBook(bookId, movieUpdatedProps) {
@@ -38,10 +38,6 @@ export function deleteBookAxios(bookId) {
     url: `/api/books/id/${bookId}`,
     headers: { authorization: `Bearer ${token}` },
   });
-}
-
-export function getBookRatingAxios(bookId) {
-  return axios.get(`/api/books/ratings/${bookId}`);
 }
 
 export function postBookAxios(bookProps) {

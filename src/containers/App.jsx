@@ -8,11 +8,10 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 //Componentes
-import NavBarContainer from "./NavBarContainer";
+import MainNavbarContainer from "./MainNavbarContainer";
 import RegisterContainer from "./RegisterContainer";
 import FooterContainer from "./FooterContainer";
-import Carousel1 from "./Carousel";
-import Carousel2 from "./Carousel2";
+import Carousel from "./Carousel";
 import LoginContainer from "./LoginContainer";
 import BooksContainer from "./BooksContainer";
 import CartContainer from "./CartContainer";
@@ -25,8 +24,13 @@ import ContactContainer from "./ContactContainer";
 import AboutContainer from "./AboutContainer";
 import SingleUserContainer from "./SingleUserContainer";
 import BooksEditContainer from "./BooksEditContainer";
-import SearchContainer from "./SearchContainer";
 import AddBookContainer from "./AddBookContainer";
+import NoResults from "../components/NoResults";
+
+import "primereact/resources/themes/saga-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+
 
 const App = () => {
   const dispatch = useDispatch();
@@ -36,33 +40,41 @@ const App = () => {
 
   return (
     <div>
-      <NavBarContainer />
-      <Switch>
-        <Route exact path="/">
-          <Carousel1 />
-          <Carousel2 />
-        </Route>
-        <Route exact path="/register" component={RegisterContainer} />
-        <Route exact path="/login" component={LoginContainer} />
-        <Route exact path="/books" render={() => <BooksContainer />} />
+      <MainNavbarContainer />
 
+      <Switch>
         <Route
-          exact
-          path="/search/:search"
-          render={() => <SearchContainer />}
+          exact path="/"
+          render={() => (
+            <div>
+              <Carousel
+                title="Latest Releases"
+                info="Discover the very latest titles from the worlds of fiction, non-fiction and children’s. These great volumes are all out now."
+              />
+              <Carousel
+                title="Best Sellers"
+                info="Discover our bestselling books and see what's trending worldwide."
+              />
+            </div>
+          )}
         />
 
+        <Route path="/register" component={RegisterContainer} />
+        <Route path="/login" component={LoginContainer} />
+
+        <Route exact path="/books" component={BooksContainer} />
+        <Route path="/no_results" component={NoResults} />
         <Route
           path="/books/:bookId"
           render={({ match }) => (
             <SingleBookContainer bookId={match.params.bookId} />
           )}
         />
+        <Route path="/newbook" component={AddBookContainer} />
+        <Route path="/edit" component={BooksEditContainer} />
 
-        <Route exact path="/postnewbook" render={() => <AddBookContainer />} />
-
-        <Route exact path="/cart" component={CartContainer} />
-        <Route exact path="/previous" component={PreviousContainer} />
+        <Route path="/cart" component={CartContainer} />
+        <Route path="/previous" component={PreviousContainer} />
 
         <Route
           path="/category/:category"
@@ -71,10 +83,10 @@ const App = () => {
           )}
         />
 
-        <Route exact path="/history" component={HistoryContainer} />
-        <Route exact path="/contact" component={ContactContainer} />
-        <Route exact path="/about" component={AboutContainer} />
-        <Route exact path="/edit" component={BooksEditContainer} />
+        <Route path="/history" component={HistoryContainer} />
+        <Route path="/contact" component={ContactContainer} />
+        <Route path="/about" component={AboutContainer} />
+        
         <Route exact path="/users" component={UsersContainer} />
         <Route
           exact
@@ -84,7 +96,6 @@ const App = () => {
           )}
         />
       </Switch>
-      <br />
       <FooterContainer />
       <ToastContainer />
     </div>
