@@ -1,28 +1,19 @@
-.slideImagediv {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.car {
-  /* width: 100vw; */
-  /* margin-top: 120px; */
-  /* display: flex; */
-  /* flex-direction: column; */
+.carouselMainDiv {
   align-items: center;
   justify-content: center;
-  height: 42vh;
+  height: auto;
+  margin: 4vh;
 }
-.carousel2 {
-  margin-top: 25px;
-}
+
 h6 {
   color: #780000;
 }
 
 .slideImagediv {
-  /* width: 80vw; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   height: 30vh;
 }
 

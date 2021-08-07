@@ -1113,7 +1113,7 @@ const seedAdmin = [
     name: "Martin",
     lastname: "Elmascapo",
     address: "calle falsa 123",
-    username: "martinlibrolover",
+    username: "martin",
     email: "martin@martin.com",
     password: "Hola123123",
     isAdmin: true,
