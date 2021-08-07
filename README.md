@@ -22,9 +22,9 @@ npm start
 <br></br>
 > There's a seed file that loads 75 books, 4 users and 1 admin.
 <br></br>
-<br></br>
 > If you wish to login as the admin, his credentials are:
 > username: "martin" password: "Hola123123"
+> Thanks for visiting our project! Feel free to navigate through books and users.
 
 ## Authors
 
