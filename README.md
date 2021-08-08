@@ -2,13 +2,31 @@
 <p>
 </p>
 
-> BookGuru is a books sale site developed by...
+> BookGuru is a books sale site, a project made by six students from Plataforma 5 Coding Bootcamp in two weeks. You can search for books, view details of each book, search by categories, add to the shopping cart, remove books from the cart and modify the quantity you're purchasing. From the shopping cart module you can see the previous orders made by the logged user. Also we have some extra options for the admin users such as edit books, promote admin rights to other users and see all the orders made by any user on the site.
 
 ## Requirements
-<p>In order to see the website in your browser, you'll need to install PostgreSQL to run the database. You'll also need to create a database called bookguru</p>
+<p>In order to see the website in your browser, you'll need to install PostgreSQL to run the database. You'll also need to create a database called bookguru
+</br>
+<h4>How to install PostgreSQL</h4>
+<p>Enter this <a src="https://www.postgresql.org/download/linux/ubuntu/">link</a> or run the following commands</p>
+</p>
+
+```sh
+# Create the file repository configuration:
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+# Import the repository signing key:
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+# Update the package lists:
+sudo apt-get update
+
+# Install the latest version of PostgreSQL.
+sudo apt-get -y install postgresql
+```
 
 ## Install
-<p>Clone this repo to the directory you prefer and install the dependencies.</p> </br>
+<p>Clone this repo to the directory you prefer and install the dependencies by running this command in the console.</p>
 
 ```sh
 npm install
