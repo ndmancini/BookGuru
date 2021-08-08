@@ -1,14 +1,16 @@
 .singlebook {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  justify-content: center;
   width: 50%;
-  height: auto;
-  margin: 0px auto;
+  margin: 5vh auto;
 }
+
 h3 {
   width: 100%;
   text-align: center;
 }
+
 .dataimg {
   display: flex;
   flex-direction: row;
@@ -23,110 +25,13 @@ p {
   text-align: justify;
 }
 
-.boton {
-  margin: 0 auto;
-}
-.addToCartEditButton {
-  padding: 1em 0em 0em 0em;
-  display: flex;
-  flex-direction: row;
+.description {
+  margin-top: 15px;
 }
 
-.editBookDiv {
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.formAndImgDiv {
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.descriptionAndSaveButtonDiv {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  align-items: center;
-  padding: 1vh 0em;
-}
-.inputImgDiv {
-  width: 55vw;
-  height: 40vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2vh 0vh;
-}
-
-.divEditBookGral {
-  padding: 0vh 0vh 0vh;
-}
-
-.descriptionDiv {
-  word-wrap: inline-block;
-  object-fit: cover;
-  width: 55vw;
-  height: 30vh;
-  max-width: 55vw;
-  max-height: 25vh;
-}
-
-.editMainDiv {
-  /* height: 100vh; */
-  width: 97vw;
-  height: 82vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.labelAndInputDiv {
-  padding: 0px 10px 0px 0px;
-  width: 30vw;
+.addToCartEditButtons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.singleMovieImageDiv {
-  width: 12em;
-  height: 18em;
-  max-width: 12em;
-  max-height: 18em;
-  /* width: 14vw;
-  height: 40vh; */
-  padding: 1vw 0vh;
-}
-
-.editSingleButtonDiv {
-  padding: 1vh;
-}
-
-.onlyButton {
-  border: none;
-  outline: none;
-  border-radius: 1em;
-  transition: color 0.4s, background 0.4s;
-}
-
-.onlyButton:hover {
-  color: white;
-  background: rgb(163, 163, 163);
-}
-
-.singleBookButtons {
-  width: 200px;
-  border: none;
-  outline: none;
-  border-radius: 1em;
-  transition: color 0.4s, background 0.4s;
-}
-
-.singleBookButtons:hover {
-  color: white;
-  background: #780000;
-}

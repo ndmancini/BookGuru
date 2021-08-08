@@ -28,25 +28,18 @@ const SingleBook = ({ singleBook, addToCart, rating }) => {
         <img src={singleBook.img} alt="" />
       </div>
       <br />
-      <div>
+      <div className="description">
         <p>{singleBook.description}</p>
       </div>
-      <div className="addToCartEditButton">
-        <div className="boton">
-          <button
-            onClick={() => addToCart(singleBook.id)}
-            className="singleBookButtons"
-          >
-            Add to cart
-          </button>
-        </div>
+      <div className="addToCartEditButtons">
         {isAdmin ? (
-          <div className="boton">
-            <Link to="/edit">
-              <button className="singleBookButtons">Edit</button>
-            </Link>
-          </div>
+          <Link to="/edit">
+            <button className="button">Edit book</button>
+          </Link>
         ) : null}
+        <button onClick={() => addToCart(singleBook.id)} className="button">
+          Add to cart
+        </button>
       </div>
     </div>
   );
