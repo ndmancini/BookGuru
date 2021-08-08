@@ -8,6 +8,7 @@
 <p>In order to see the website in your browser, you'll need to install PostgreSQL to run the database. You'll also need to create a database called bookguru</p>
 
 ## Install
+<p>Clone this repo to the directory you prefer and install the dependencies.</p> </br>
 
 ```sh
 npm install

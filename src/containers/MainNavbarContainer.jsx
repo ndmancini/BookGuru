@@ -7,7 +7,6 @@ import { getBooksByAuthorOrTitle } from "../axiosRequests/booksRequests";
 
 import { Menubar } from "primereact/menubar";
 import { InputText } from "primereact/inputtext";
-import { Button } from "primereact/button";
 
 import "../styles/NavBar.css";
 const imagen = require("../assets/Logo.png");
@@ -58,27 +57,35 @@ const MainNavbarContainer = () => {
             <div className="userLoggedDiv">
               <h6 className="usernameLabel">{user.username}</h6>
               <Link to="/cart">
-                <Button icon="pi pi-shopping-cart" label="My cart" />
+                <button className="button">My cart</button>
               </Link>
               <Link to={`/users/${user.id}`}>
-                <Button label="My account" style={{ marginLeft: "20px" }} />
+                <button className="button" style={{ marginLeft: "20px" }}>
+                  My account
+                </button>
               </Link>
-              <Button
-                label="Logout"
+              <button
+                className="button"
                 onClick={logout}
                 style={{ margin: "0 20px 0 5vw" }}
-              />
+              >
+                Logout
+              </button>
             </div>
           ) : (
             <div className="noUserLoggedDiv">
               <Link to="/register">
-                <Button icon="pi pi-shopping-cart" label="My cart" />
+                <button className="button">My cart</button>
               </Link>
               <Link to="/register">
-                <Button label="Register" style={{ marginLeft: "20px" }} />
+                <button className="button" style={{ marginLeft: "20px" }}>
+                  Register
+                </button>
               </Link>
               <Link to="/login">
-                <Button label="Login" style={{ margin: "0 20px" }} />
+                <button className="button" style={{ margin: "0 20px" }}>
+                  Login
+                </button>
               </Link>
             </div>
           )}
