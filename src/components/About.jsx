@@ -4,7 +4,6 @@ import "../styles/About.css";
 const AboutContainer = () => {
   return (
     <div className="about">
-      <hr />
       <h3>
         BookGuru is a books sale site, a project made by six students from
         Plataforma 5 in two weeks. You can search for books, view details of each
@@ -23,7 +22,6 @@ const AboutContainer = () => {
       <br />
       <br />
       <h3>Thanks for shopping with us!</h3>
-      <hr />
     </div>
   );
 };

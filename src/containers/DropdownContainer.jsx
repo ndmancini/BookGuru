@@ -6,20 +6,21 @@ import {
   ButtonDropdown,
 } from "reactstrap";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { getBooksByCategory } from "../axiosRequests/booksRequests";
-import { setCategory } from "../store/category";
-import "../styles/Categories.css";
+import { setBooks } from "../store/books";
 
 const Dropdown = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [dropdownOpen, setOpen] = React.useState(false);
 
   const toggle = () => setOpen(!dropdownOpen);
 
   const selectCategory = (category) => {
     getBooksByCategory(category).then(({ data }) => {
-      dispatch(setCategory(data));
+      dispatch(setBooks(data));
+      history.push("/books");
     });
   };
 
@@ -36,12 +37,11 @@ const Dropdown = () => {
     "Self-Help",
   ];
 
-
   return (
     <div>
       <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
         <DropdownToggle caret color="" className="drop-color">
-            Categories
+          Categories
         </DropdownToggle>
         <DropdownMenu className="categories">
           {categorias.map((categoria, index) => (
@@ -50,9 +50,7 @@ const Dropdown = () => {
               onClick={() => selectCategory(categoria)}
               className="drop-color"
             >
-              <Link className="categories" to={`/category/${categoria}`}>
-                {categoria}
-              </Link>
+              {categoria}
             </DropdownItem>
           ))}
         </DropdownMenu>

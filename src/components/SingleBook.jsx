@@ -32,14 +32,14 @@ const SingleBook = ({ singleBook, addToCart, rating }) => {
         <p>{singleBook.description}</p>
       </div>
       <div className="addToCartEditButtons">
+        <button onClick={() => addToCart(singleBook.id)} className="button">
+          Add to cart
+        </button>
         {isAdmin ? (
           <Link to="/edit">
             <button className="button">Edit book</button>
           </Link>
         ) : null}
-        <button onClick={() => addToCart(singleBook.id)} className="button">
-          Add to cart
-        </button>
       </div>
     </div>
   );

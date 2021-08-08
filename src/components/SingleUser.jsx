@@ -17,7 +17,7 @@ const SingleUser = ({ singleUser }) => {
           <Link to="/">
             <button className="button editBtn">Edit my info</button>
           </Link>
-          <Link to="/previous">
+          <Link to="/user_history">
             <button className="button">My history</button>
           </Link>
         </div>

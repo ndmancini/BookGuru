@@ -11,8 +11,6 @@ const BooksEdit = ({
 
   return (
     <div className="divEditBookGral">
-      {/* <h3>{singleBook.title}</h3> */}
-      {/* <hr /> */}
       <div className="dataimg">
         <div>
           <form>
@@ -22,7 +20,6 @@ const BooksEdit = ({
                   style={{
                     width: "55vw",
                     textAlign: "center",
-                    // padding: "1vh 0em",
                   }}
                   type="text"
                   defaultValue={singleBook.title}
@@ -77,14 +74,12 @@ const BooksEdit = ({
                 ></textarea>
                 <div className="addToCartEditButton">
                   <div className="editSingleButtonDiv">
-                    {/* <Link to={`/books/${singleBook.id}`}> */}
                     <button
                       className="onlyButton"
                       onClick={(e) => submitHandler(e, singleBook.id)}
                     >
                       Save
                     </button>
-                    {/* </Link> */}
                   </div>
                   <div className="editSingleButtonDiv">
                     <button

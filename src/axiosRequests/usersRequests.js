@@ -54,7 +54,7 @@ export function deleteUserAxios(userId) {
   });
 }
 
-export function setToAdminAxios(userId) {
+export function toggleAdminAxios(userId) {
   const token = JSON.parse(localStorage.getItem("token"));
 
   return axios({

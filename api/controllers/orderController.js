@@ -3,13 +3,13 @@ const { Op } = require("sequelize");
 
 module.exports = {
 
-  user_validation: function (req, res) {
-    User.findByPk(req.user.id)
-      .then((user) => {
-        res.status(200).send(user);
-      })
-      .catch((err) => res.status(400).send("Please Login or Register"));
-  },
+  // user_validation: function (req, res) {
+  //   User.findByPk(req.user.id)
+  //     .then((user) => {
+  //       res.status(200).send(user);
+  //     })
+  //     .catch((err) => res.status(400).send("Please Login or Register"));
+  // },
 
   order_creation: function (req, res) {
     const { userId, bookId } = req.body;
@@ -66,11 +66,11 @@ module.exports = {
     }).then((checkedOrders) => res.status(200).send(checkedOrders));
   },
 
-  order_getAllPendingOrders: function (req, res) {
-    Order.findAll({
-      where: { bought: false },
-      include: Book,
-    }).then((pendingOrders) => res.status(200).send(pendingOrders));
-  },
+  // order_getAllPendingOrders: function (req, res) {
+  //   Order.findAll({
+  //     where: { bought: false },
+  //     include: Book,
+  //   }).then((pendingOrders) => res.status(200).send(pendingOrders));
+  // },
   
 };

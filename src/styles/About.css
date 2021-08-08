@@ -1,14 +1,6 @@
 .about {
-  height: 60vh;
-  /* margin-top: 150px; */
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-hr {
-  height: 2px;
-  background-color: #780000;
-  border-color: #780000;
+  height: 80vh;
+  margin: 10vh;
 }
 
 h3 {

@@ -24,17 +24,17 @@ module.exports = {
       .catch((err) => res.status(400).send("Book not found!"));
   },
 
-  book_getByTitle: function (req, res) {
-    Book.findAll({
-      where: { title: { [Op.iLike]: `%${req.params.title}%` } },
-    }).then((books) => res.send(books));
-  },
+  // book_getByTitle: function (req, res) {
+  //   Book.findAll({
+  //     where: { title: { [Op.iLike]: `%${req.params.title}%` } },
+  //   }).then((books) => res.send(books));
+  // },
 
-  book_getByAuthor: function (req, res) {
-    Book.findAll({
-      where: { author: { [Op.iLike]: `%${req.params.author}%` } },
-    }).then((books) => res.send(books));
-  },
+  // book_getByAuthor: function (req, res) {
+  //   Book.findAll({
+  //     where: { author: { [Op.iLike]: `%${req.params.author}%` } },
+  //   }).then((books) => res.send(books));
+  // },
 
   book_getByCategory: function (req, res) {
     Book.findAll({

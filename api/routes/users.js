@@ -15,13 +15,13 @@ router.get("/:userId/cart", checkJWT, userController.user_getCart)
 //gets user by its ID
 router.get("/user/:userId", checkJWT, userController.user_getUserByPk)
 
-//gets user's old orders
+//gets user's history
 router.get("/:userId/checked", checkJWT, userController.user_checkoutOrder) 
 
 //gets all users (for admin only)
 router.get("/all/:userId", checkJWT, userController.user_getAllUsers) 
 
-//deteles a user (for admin only)
+//deletes a user (for admin only)
 router.delete("/", checkJWT, userController.user_delete)
 
 //toggles user's isAdmin bool property (for admin only)

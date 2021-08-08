@@ -1,14 +1,10 @@
 .contact {
   display: flex;
-  flex-direction: column;
-  height: 58.2vh;
-  /* margin-top: 150px; */
-  margin-left: 10%;
-  margin-right: 10%;
+  height: 50vh;
+  margin: 5vh auto;
   align-items: center;
   justify-content: center;
-  color: #780000 !important;
-  height: 62vh;
+  color: #780000;
 }
 
 h1 {

@@ -47,7 +47,7 @@ const CartContainer = () => {
       <div className="previousOrdersDiv">
         <Link
           className="sub-link"
-          to="/previous"
+          to="/user_history"
           style={{ textDecoration: "none" }}
         >
           <div>

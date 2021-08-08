@@ -6,7 +6,7 @@ import SuccessToast from "../hooks/toastNotifications/SuccessToast";
 import WarningToast from "../hooks/toastNotifications/WarningToast";
 import "../styles/Cart.css";
 
-const PreviousContainer = () => {
+const UserHistoryContainer = () => {
   const [cart, setCart] = useState([]);
   const [rating, setRating] = useState(1);
 
@@ -61,4 +61,4 @@ const PreviousContainer = () => {
   );
 };
 
-export default PreviousContainer;
+export default UserHistoryContainer;

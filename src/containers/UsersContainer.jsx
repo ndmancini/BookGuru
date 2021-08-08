@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   getAllUsers,
   deleteUserAxios,
-  setToAdminAxios,
+  toggleAdminAxios,
 } from "../axiosRequests/usersRequests";
 import SuccessToast from "../hooks/toastNotifications/SuccessToast";
 import Users from "../components/Users";
@@ -28,8 +28,8 @@ const UsersContainer = () => {
       });
   };
 
-  const setToAdmin = (userId) => {
-    setToAdminAxios(userId).then(({ data }) => {
+  const toggleAdminStatus = (userId) => {
+    toggleAdminAxios(userId).then(({ data }) => {
       getAllUsers().then((res) => {
         setUsers(res.data);
         SuccessToast(`👩‍💻${data.username} admin status toggled👩‍💻`);
@@ -38,7 +38,7 @@ const UsersContainer = () => {
   };
 
   return (
-    <Users users={users} deleteUser={deleteUser} setToAdmin={setToAdmin} />
+    <Users users={users} deleteUser={deleteUser} toggleAdminStatus={toggleAdminStatus} />
   );
 };
 

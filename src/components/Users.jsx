@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/Books.css";
 import "../styles/Users.css";
 
-const Users = ({ users, deleteUser, setToAdmin }) => {
+const Users = ({ users, deleteUser, toggleAdminStatus }) => {
   return (
     <div className="usersMainDiv">
       {users &&
@@ -28,7 +28,7 @@ const Users = ({ users, deleteUser, setToAdmin }) => {
               </div>
               <div className="usersButtonDiv">
                 <button
-                  onClick={() => setToAdmin(user.id)}
+                  onClick={() => toggleAdminStatus(user.id)}
                   className="usersButton"
                 >
                   Toggle admin status

@@ -1,12 +1,11 @@
 import React from "react";
 import "../styles/Footer.css";
 
-const FooterContainer = () => {
+const Footer = () => {
   return (
     <footer>
       <div className="footer">
-        <div className="row" />
-        <div className="col-sm-4">
+        <div>
           <br />
           CUSTOMER SERVICES <br />
           _______________________
@@ -16,7 +15,7 @@ const FooterContainer = () => {
           <br /> bookguru@books.com
         </div>
 
-        <div className="col-sm-4">
+        <div>
           <br />
           SUSCRIPTIONS <br />
           _______________________
@@ -24,7 +23,7 @@ const FooterContainer = () => {
           <br />
           BookGuru subscription <br /> My subscription
         </div>
-        <div className="col-sm-4">
+        <div>
           <br />
           FOLLOW US <br />
           _______________________
@@ -42,4 +41,4 @@ const FooterContainer = () => {
   );
 };
 
-export default FooterContainer;
+export default Footer;

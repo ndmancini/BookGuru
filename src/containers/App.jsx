@@ -7,21 +7,22 @@ import userPersisterHook from "../hooks/userPersisterHook";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-//Componentes
+//Components
 import MainNavbarContainer from "./MainNavbarContainer";
+import SubNavbarContainer from "./SubNavbarContainer";
 import RegisterContainer from "./RegisterContainer";
-import FooterContainer from "./FooterContainer";
+import Footer from "../components/Footer";
 import Carousel from "./Carousel";
 import LoginContainer from "./LoginContainer";
 import BooksContainer from "./BooksContainer";
 import CartContainer from "./CartContainer";
 import SingleBookContainer from "./SingleBookContainer";
-import PreviousContainer from "./PreviousContainer";
+import UserHistoryContainer from "./UserHistoryContainer";
 import CategoriesContainer from "./CategoriesContainer";
 import UsersContainer from "./UsersContainer";
 import HistoryContainer from "./HistoryContainer";
-import ContactContainer from "./ContactContainer";
-import AboutContainer from "./AboutContainer";
+import Contact from "../components/Contact";
+import About from "../components/About";
 import SingleUserContainer from "./SingleUserContainer";
 import BooksEditContainer from "./BooksEditContainer";
 import AddBookContainer from "./AddBookContainer";
@@ -41,6 +42,7 @@ const App = () => {
   return (
     <div>
       <MainNavbarContainer />
+      <SubNavbarContainer/>
 
       <Switch>
         <Route
@@ -74,7 +76,7 @@ const App = () => {
         <Route path="/edit" component={BooksEditContainer} />
 
         <Route path="/cart" component={CartContainer} />
-        <Route path="/previous" component={PreviousContainer} />
+        <Route path="/user_history" component={UserHistoryContainer} />
 
         <Route
           path="/category/:category"
@@ -84,8 +86,8 @@ const App = () => {
         />
 
         <Route path="/history" component={HistoryContainer} />
-        <Route path="/contact" component={ContactContainer} />
-        <Route path="/about" component={AboutContainer} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
         
         <Route exact path="/users" component={UsersContainer} />
         <Route
@@ -96,7 +98,7 @@ const App = () => {
           )}
         />
       </Switch>
-      <FooterContainer />
+      <Footer />
       <ToastContainer />
     </div>
   );

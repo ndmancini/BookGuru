@@ -31,7 +31,7 @@ const MainNavbarContainer = () => {
   };
 
   const logout = () => {
-    window.FB.api("/me/permissions", "delete", null, () => window.FB.logout());
+    if (window.FB) window.FB.api("/me/permissions", "delete", null, () => window.FB.logout());
     localStorage.clear();
     dispatch(setUser({}));
     history.push("/");

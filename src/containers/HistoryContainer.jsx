@@ -7,12 +7,11 @@ const HistoryContainer = () => {
 
   React.useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
-    if (user.isAdmin === true) getAllOrders().then((res) => setCart(res.data));
+    if (user && user.isAdmin) getAllOrders().then((res) => setCart(res.data));
   }, []);
 
   return (
     <div className="cart">
-      {/* Cart table */}
       <table className="table">
         <tr>
           <th>Username</th>
@@ -21,14 +20,14 @@ const HistoryContainer = () => {
           <th>Quantity</th>
           <th>Price</th>
         </tr>
-        {cart && cart.map((data, index) => {
+        {cart && cart.map((cart, index) => {
           return (
             <tr key={index}>
-              <td>{data.user.username}</td>
-              <td>{data.book.title}</td>
-              <td>{data.book.author}</td>
-              <td>{data.quantity}</td>
-              <td>{data.book.price}</td>
+              {cart.user ? <td>{cart.user.username}</td> : <td></td>}
+              <td>{cart.book.title}</td>
+              <td>{cart.book.author}</td>
+              <td>{cart.quantity}</td>
+              <td>{cart.book.price}</td>
             </tr>
           );
         })}
