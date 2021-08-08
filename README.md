@@ -34,7 +34,7 @@ psql
 CREATE DATABASE bookguru;
 
 # Connect to the database to check everything is OK
-/\c bookguru;
+\c bookguru;
 ```
 
 ## Install
@@ -46,9 +46,11 @@ npm install
 
 ## Usage
 <p>Now you can run the project!</p>
+
 ```sh
 npm start
 ```
+
 <p>The browser will open automatically and you'll see our home page.
 <br>
 There's a seed file that loads 75 books, 4 users and 1 admin.
