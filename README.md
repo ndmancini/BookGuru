@@ -8,7 +8,7 @@
 <p>In order to see the website in your browser, you'll need to install PostgreSQL to run the database. You'll also need to create a database called bookguru
 </br>
 <h4>How to install PostgreSQL</h4>
-<p>Enter this <a src="https://www.postgresql.org/download/linux/ubuntu/">link</a> or run the following commands</p>
+<p>Enter this <a href="https://www.postgresql.org/download/linux/ubuntu/">link</a> or run the following commands</p>
 </p>
 
 ```sh
@@ -24,6 +24,18 @@ sudo apt-get update
 # Install the latest version of PostgreSQL.
 sudo apt-get -y install postgresql
 ```
+<p>Now that the PostgreSQL has been installed, open it and create the databse</p>
+
+```sh
+# Open the PostgreSQL:
+psql
+
+# Create de database:
+CREATE DATABASE bookguru
+
+# Connect to the database to check everything is OK
+\c bookguru
+```
 
 ## Install
 <p>Clone this repo to the directory you prefer and install the dependencies by running this command in the console.</p>
@@ -33,7 +45,7 @@ npm install
 ```
 
 ## Usage
-
+<p>Now you can run the project!</p>
 ```sh
 npm start
 ```
