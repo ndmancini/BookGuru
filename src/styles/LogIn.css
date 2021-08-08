@@ -1,69 +1,31 @@
 .login {
   display: flex;
   flex-direction: column;
-  height: 62.2vh;
-  background-color: white;
+  align-items: center;
   color: black;
   text-align: center;
-  /* margin-top: 150px; */
-  align-items: center;
-  justify-content: center;
+  height: auto;
+  margin: 4vh auto 6vh auto;
 }
 
-h8 {
-  color: #780000;
-}
-h3 {
+.loginTitle {
+  margin-bottom: 20px;
   color: #780000;
 }
 
-
-.botonLogin {
-  background-color: #780000;
-  color: white;
+.loginInput {
+  height: 2.5em;
+  width: 15em;
+  border-radius: 0.4em;
+  border: 1px solid grey;
   padding: 10px;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 2em;
-  transition: color 1s, background 1s;
-  border: none;
+  margin-bottom: 1em;
 }
 
-/* .botonLogin:disabled {
-  color: white;
-  background: grey;
-  transition: color 1s, background 1s;
-} */
-
-.loginInputStyle {
-  height: 2em;
-  width: 12em;
-  border-radius: 1em;
-  border: 1px solid;
-  padding: 0px 0px 0px 10px;
-}
-
-.loginInputStyle:focus {
+.loginInput:focus {
   outline: none;
 }
 
-.loginButtonDiv {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5em;
-}
-
 .singleButtonLoginDiv {
-  padding: 1em 0em 0em 0em;
-}
-
-.botonLoginFacebook {
-  background-color: #4267b2;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 2em;
-  transition: color 1s, background 1s;
-  border: none;
+  padding-top: 1em;
 }

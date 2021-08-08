@@ -9,7 +9,7 @@ const SingleUser = ({ singleUser }) => {
       <hr />
       <div>
         <h5>Name: {singleUser.name}</h5>
-        <h5>LastName: {singleUser.lastname}</h5>
+        <h5>Last name: {singleUser.lastname}</h5>
         <h5>Address: {singleUser.address}</h5>
         <h5>Username: {singleUser.username}</h5>
         <h5>E-mail: {singleUser.email}</h5>

@@ -18,14 +18,15 @@ npm install
 ```sh
 npm start
 ```
-> The browser will open automatically and you'll see our home page.
+<p>The browser will open automatically and you'll see our home page.
+<br>
+There's a seed file that loads 75 books, 4 users and 1 admin.
+<br>
+If you wish to login as the admin, his credentials are:
+username: "martin"; password: "Hola123123"
 <br></br>
-> There's a seed file that loads 75 books, 4 users and 1 admin.
-<br></br>
-> If you wish to login as the admin, his credentials are:
-> username: "martin" password: "Hola123123"
-> Thanks for visiting our project! Feel free to navigate through books and users.
-
+Thanks for visiting our project! Feel free to navigate through books and users.
+</p>
 ## Authors
 
 👤 **Matias Carou, Nicolas Mancini, Luis Osorio, Paula Binimelis, Pilar Dubiau y Alejandro Osorio**

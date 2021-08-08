@@ -1,17 +1,3 @@
-//Dropfown categories
-// const categorias = [
-//   "Biography",
-//   "Business & Money ",
-//   "Kids",
-//   "Classic Literature & Fiction",
-//   "Comics & Graphic Novels",
-//   "Cooking",
-//   "Crime, Thriller, Mystery",
-//   "Science",
-//   "Self-Help",
-//   "Science Fiction & Fantasy"
-// ];
-
 const seedBooks = [
   {
     title: "Martín Fierro",
@@ -473,8 +459,8 @@ const seedBooks = [
     publisher: "Penguin Books Ltd",
     maturityRating: "Recommended for all audiences",
     description: `Many years later, as he faced the firing squad, Colonel Aureliano Buendia was to remember that distant afternoon when his father took him to discover ice.'
-  Gabriel Garcia Marquez's great masterpiece is the story of seven generations of the Buendia family and of Macondo, the town they built. Though little more than a settlement surrounded by mountains, Macondo has its wars and disasters, even its wonders and its miracles. A microcosm of Columbian life, its secrets lie hidden, encoded in a book, and only Aureliano Buendia can fathom its mysteries and reveal its shrouded destiny. 
-  Blending political reality with magic realism, fantasy and comic invention, One Hundred Years of Solitude is one of the most daringly original works of the twentieth century.`,
+    Gabriel Garcia Marquez's great masterpiece is the story of seven generations of the Buendia family and of Macondo, the town they built. Though little more than a settlement surrounded by mountains, Macondo has its wars and disasters, even its wonders and its miracles. A microcosm of Columbian life, its secrets lie hidden, encoded in a book, and only Aureliano Buendia can fathom its mysteries and reveal its shrouded destiny. 
+    Blending political reality with magic realism, fantasy and comic invention, One Hundred Years of Solitude is one of the most daringly original works of the twentieth century.`,
   },
   {
     title: "El amor en los tiempos del colera",
@@ -486,8 +472,8 @@ const seedBooks = [
     publisher: "Penguin Books Ltd ",
     maturityRating: "Recommended for all audiences",
     description: `It was inevitable: the scent of bitter almonds always reminded him of the fate of unrequited love'
-  Fifty-one years, nine months and four days have passed since Fermina Daza rebuffed hopeless romantic Florentino Ariza's impassioned advances and married Dr Juvenal Urbino instead. During that half-century, Flornetino has fallen into the arms of many delighted women, but has loved none but Fermina.
-  When Fermina's husband is killed trying to retrieve his pet parrot from a mango tree, Florentino seizes his chance to declare his enduring love. But can young love find new life in the twilight of their lives?`,
+    Fifty-one years, nine months and four days have passed since Fermina Daza rebuffed hopeless romantic Florentino Ariza's impassioned advances and married Dr Juvenal Urbino instead. During that half-century, Flornetino has fallen into the arms of many delighted women, but has loved none but Fermina.
+    When Fermina's husband is killed trying to retrieve his pet parrot from a mango tree, Florentino seizes his chance to declare his enduring love. But can young love find new life in the twilight of their lives?`,
   },
   {
     title: "El coronel no tiene quien le escriba",
@@ -499,7 +485,7 @@ const seedBooks = [
     publisher: "Penguin Books",
     maturityRating: "Recommended for all audiences",
     description: `Fridays are different. Every other day of the week, the Colonel and his ailing wife fight a constant battle against poverty and monotony, scraping together the dregs of their savings for the food and medicine that keeps them alive. But on Fridays the postman comes - and that sets a fleeting wave of hope rushing through the Colonel's ageing heart.
-  For fifteen years he's watched the mail launch come into harbour, hoping he'll be handed an envelope containing the army pension promised to him all those years ago. Whilst he waits for the cheque, his hopes are pinned on his prize bird and the upcoming cockfighting season. But until then the bird - like the Colonel and his wife - must somehow be fed.`,
+    For fifteen years he's watched the mail launch come into harbour, hoping he'll be handed an envelope containing the army pension promised to him all those years ago. Whilst he waits for the cheque, his hopes are pinned on his prize bird and the upcoming cockfighting season. But until then the bird - like the Colonel and his wife - must somehow be fed.`,
   },
   {
     title: "El Aleph",
@@ -523,7 +509,7 @@ const seedBooks = [
     publisher: "Penguin Books ",
     maturityRating: "Recommended for all audiences",
     description: `Forty-nine, with a kind face, no serious ailments (apart from varicose veins on his ankles), a good salary and three moody children, widowed accountant Martin Santome is about to retire. He assumes he'll take up gardening, or the guitar, or whatever retired people do. What he least expects is to fall passionately in love with his shy young employee Laura Avellaneda. As they embark upon an affair, happy and irresponsible, Martin begins to feel the weight of his quiet existence lift - until, out of nowhere, their joy is cut short. 
-  The intimate, heartbreaking diary of an ordinary man who is reborn when he falls in love one final time, this beloved Latin American novel has been translated into twenty languages and sold millions of copies worldwide, and is now published in Penguin Classics for the first time.`,
+    The intimate, heartbreaking diary of an ordinary man who is reborn when he falls in love one final time, this beloved Latin American novel has been translated into twenty languages and sold millions of copies worldwide, and is now published in Penguin Classics for the first time.`,
   },
   {
     title: "La Sombra del viento ",
@@ -535,8 +521,8 @@ const seedBooks = [
     publisher: "Planeta",
     maturityRating: "Recommended for all audiences",
     description: `The Shadow of the Wind is a stunning literary thriller in which the discovery of a forgotten book leads to a hunt for an elusive author who may or may not still be alive...
-  Hidden in the heart of the old city of Barcelona is the 'Cemetery of Lost Books', a labyrinthine library of obscure and forgotten titles that have long gone out of print. To this library, a man brings his 10-year-old son Daniel one cold morning in 1945. Daniel is allowed to choose one book from the shelves and pulls out 'The Shadow of the Wind' by Julian Carax.
-  But as he grows up, several people seem inordinately interested in his find. Then, one night, as he is wandering the old streets once more, Daniel is approached by a figure who reminds him of a character from the book, a character who turns out to be the devil. This man is tracking down every last copy of Carax's work in order to burn them. What begins as a case of literary curiosity turns into a race to find out the truth behind the life and death of Julian Carax and to save those he left behind...`,
+    Hidden in the heart of the old city of Barcelona is the 'Cemetery of Lost Books', a labyrinthine library of obscure and forgotten titles that have long gone out of print. To this library, a man brings his 10-year-old son Daniel one cold morning in 1945. Daniel is allowed to choose one book from the shelves and pulls out 'The Shadow of the Wind' by Julian Carax.
+    But as he grows up, several people seem inordinately interested in his find. Then, one night, as he is wandering the old streets once more, Daniel is approached by a figure who reminds him of a character from the book, a character who turns out to be the devil. This man is tracking down every last copy of Carax's work in order to burn them. What begins as a case of literary curiosity turns into a race to find out the truth behind the life and death of Julian Carax and to save those he left behind...`,
   },
   {
     title: "El Prisionero del cielo",
@@ -749,7 +735,7 @@ const seedBooks = [
     publisher: "Penguin Books Ltd ",
     maturityRating: "Recommended for all audiences",
     description: `Mr Holmes, they were the footprints of a gigantic hound!" The terrible spectacle of the beast, the fog of the moor, the discovery of a body: this classic horror story pits detective against dog, rationalism against the supernatural, good against evil. When Sir Charles Baskerville is found dead on the wild Devon moorland with the footprints of a giant hound nearby, the blame is placed on a family curse. It is left to Sherlock Holmes and Doctor Watson to solve the mystery of the legend of the phantom hound before Sir Charles' heir comes to an equally gruesome
-  end.The Hound of the Baskervilles gripped readers when it was first serialised and has continued to hold its place in the popular imagination.`,
+    end.The Hound of the Baskervilles gripped readers when it was first serialised and has continued to hold its place in the popular imagination.`,
   },
   {
     title: "The Complete Sherlock Holmes",
@@ -887,8 +873,8 @@ const seedBooks = [
     publisher: "Orion Publishing Co",
     maturityRating: "MATURE",
     description: `Diego Maradona was one of those rare individuals who became a legend in his own lifetime. Widely regarded as one of the greatest footballers of all time, he was also one the most controversial.
-    In an international career with Argentina he earned 91 caps and scored 34 goals, and played in four FIFA World Cups. In the 1986 ('hand of God') tournament in Mexico, he captained his nation and led them to victory over West Germany in the final, and won the Golden Ball as the tournament's best player. His vision, passing, ball control and dribbling skills, and his presence and leadership on the field, often electrified his own team's overall performance.
-    Maradona's genius and skill long gone, he continued to fascinate every generation. Why was this? Why, at World Cup tournaments, did the world's television cameras still seek him out? What was it about him that endured for so long and continues to hold so many - football and non-football fans alike - in such thrall? Why does a footballer have a "Church" dedicated to him in Argentina? What fosters such adulation and how does such adoration promote or encourage a self-destructive personality?`,
+      In an international career with Argentina he earned 91 caps and scored 34 goals, and played in four FIFA World Cups. In the 1986 ('hand of God') tournament in Mexico, he captained his nation and led them to victory over West Germany in the final, and won the Golden Ball as the tournament's best player. His vision, passing, ball control and dribbling skills, and his presence and leadership on the field, often electrified his own team's overall performance.
+      Maradona's genius and skill long gone, he continued to fascinate every generation. Why was this? Why, at World Cup tournaments, did the world's television cameras still seek him out? What was it about him that endured for so long and continues to hold so many - football and non-football fans alike - in such thrall? Why does a footballer have a "Church" dedicated to him in Argentina? What fosters such adulation and how does such adoration promote or encourage a self-destructive personality?`,
   },
   {
     title: "More Than a Woman",
@@ -900,7 +886,7 @@ const seedBooks = [
     publisher: "Ebury Publishing ",
     maturityRating: "MATURE",
     description: `A decade ago, Caitlin Moran thought she had it all figured out. Her instant bestseller How to Be a Woman was a game-changing take on feminism, the patriarchy, and the general 'hoo-ha' of becoming a woman. Back then, she firmly believed 'the difficult bit' was over, and her forties were going to be a doddle. 
-    If only she had known: when middle age arrives, a whole new bunch of tough questions need answering. Why isn't there such a thing as a 'Mum Bod'? How did sex get boring? What are men really thinking? Where did all that stuff in the kitchen drawers come from? Can feminists have Botox? Why has wine turned against you? How can you tell the difference between a Teenage Micro-Breakdown, and The Real Thing? Has feminism gone too far? And, as always, WHO'S LOOKING AFTER THE CHILDREN?`,
+      If only she had known: when middle age arrives, a whole new bunch of tough questions need answering. Why isn't there such a thing as a 'Mum Bod'? How did sex get boring? What are men really thinking? Where did all that stuff in the kitchen drawers come from? Can feminists have Botox? Why has wine turned against you? How can you tell the difference between a Teenage Micro-Breakdown, and The Real Thing? Has feminism gone too far? And, as always, WHO'S LOOKING AFTER THE CHILDREN?`,
   },
   {
     title: "Attack On Titan 1",
@@ -912,7 +898,7 @@ const seedBooks = [
     publisher: "Kodansha America, Inc",
     maturityRating: "MATURE",
     description: `Several hundred years ago, humans were nearly exterminated by giants. Giants are typically several stories tall, seem to have no intelligence and who devour human beings. A small percentage of humanity survied barricading themselves in a city protected by walls even taller than the biggest of giants.
-    Flash forward to the present and the city has not seen a giant in over 100 years - before teenager Elen and his foster sister Mikasa witness something horrific as the city walls are destroyed by a super-giant that appears from nowhere.`,
+      Flash forward to the present and the city has not seen a giant in over 100 years - before teenager Elen and his foster sister Mikasa witness something horrific as the city walls are destroyed by a super-giant that appears from nowhere.`,
   },
   {
     title: "Attack On Titan 2",
@@ -935,7 +921,7 @@ const seedBooks = [
     publisher: "Viz Media, Subs. of Shogakukan Inc ",
     maturityRating: "MATURE",
     description: `Naruto is a ninja-in-training with a need for attention, a knack for mischief, and sealed within him, a strange, formidable power. His antics amuse his instructor Kakashi and irritate his teammates, intense Sasuki and witty Sakura, but Naruto is serious about becoming the greatest ninja in the village of Konohagakure! 
-      In another world, ninja are the ultimate power - and in the village of Konohagakure live the stealthiest ninja in the world. But twelve years ago Konohagakure was attacked by a fearsome threat - a nine-tailed fox demon which claims the life of the Hokage, the village champion. Today, peace has returned, and a troublemaking orphan named Uzumaki Naruto is struggling to graduate from the Ninja Academy. His goal: to become the next Hokage. But unknown to Naruto and his classmates, within him is a terrifying force...`,
+        In another world, ninja are the ultimate power - and in the village of Konohagakure live the stealthiest ninja in the world. But twelve years ago Konohagakure was attacked by a fearsome threat - a nine-tailed fox demon which claims the life of the Hokage, the village champion. Today, peace has returned, and a troublemaking orphan named Uzumaki Naruto is struggling to graduate from the Ninja Academy. His goal: to become the next Hokage. But unknown to Naruto and his classmates, within him is a terrifying force...`,
   },
   {
     title:
@@ -948,7 +934,7 @@ const seedBooks = [
     publisher: "Viz Media, Subs. of Shogakukan Inc ",
     maturityRating: "MATURE",
     description: `Set in a richly imagined apocalyptic world, Sadamoto’s pivotal manga blends all-action set pieces with the complex character development of Shinji, a young pilot facing his own battles as he attempts to fight a sinister race of invading beings.
-    Once Shinji didn't care about anything; then he found people to fight for-only to learn that he couldn't protect them, or keep those he let into his heart from going away. As mankind tilts on the brink of the apocalyptic Third Impact, human feelings are fault lines leading to destruction and just maybe, redemption and rebirth.`,
+      Once Shinji didn't care about anything; then he found people to fight for-only to learn that he couldn't protect them, or keep those he let into his heart from going away. As mankind tilts on the brink of the apocalyptic Third Impact, human feelings are fault lines leading to destruction and just maybe, redemption and rebirth.`,
   },
   {
     title:
@@ -1017,7 +1003,7 @@ const seedBooks = [
     publisher: "Little, Brown Book Group ",
     maturityRating: "MATURE",
     description: `Based on more than forty interviews with Steve Jobs conducted over two years - as well as interviews with more than a hundred family members, friends, adversaries, competitors, and colleagues - this is the acclaimed, internationally bestselling biography of the ultimate icon of inventiveness.
-    Walter Isaacson tells the story of the rollercoaster life and searingly intense personality of creative entrepreneur whose passion for perfection and ferocious drive revolutionized six industries: personal computers, animated movies,music, phones, tablet computing, and digital publishing.`,
+      Walter Isaacson tells the story of the rollercoaster life and searingly intense personality of creative entrepreneur whose passion for perfection and ferocious drive revolutionized six industries: personal computers, animated movies,music, phones, tablet computing, and digital publishing.`,
   },
 
   {
@@ -1041,8 +1027,8 @@ const seedBooks = [
     publisher: "Little, Brown Book Group ",
     maturityRating: "MATURE",
     description: `There are few writers who can claim the popularity and enduring appeal of J.R.R. Tolkien. His celebrated novels have sold in excess of 160 million copies, and are in large part responsible for seeding the entire genre of fantasy fiction.
-    Now, renowned biographer Michael White looks back over the little-known life of this most treasured of writers. In absorbing and revealing detail, he chronicles Tolkien's childhood years and the tragic early death of his parents; his burgeoning romance with Edith Brett; his many years as an Oxford academic; his friendship with C.S. Lewis and the founding of 'The Inklings' group. White describes why Tolkien's writing took off so spectacularly - and how The Lord of the Rings became the must-read of the late Sixties counter-culture.
-    Informed and fascinating, Tolkien is the fascinating story of how the man who created The Hobbit became one of the  giants of modern literature.`,
+      Now, renowned biographer Michael White looks back over the little-known life of this most treasured of writers. In absorbing and revealing detail, he chronicles Tolkien's childhood years and the tragic early death of his parents; his burgeoning romance with Edith Brett; his many years as an Oxford academic; his friendship with C.S. Lewis and the founding of 'The Inklings' group. White describes why Tolkien's writing took off so spectacularly - and how The Lord of the Rings became the must-read of the late Sixties counter-culture.
+      Informed and fascinating, Tolkien is the fascinating story of how the man who created The Hobbit became one of the  giants of modern literature.`,
   },
   {
     title: "An A-Z of Pasta: Stories, Shapes, Sauces, Recipes",
@@ -1108,71 +1094,4 @@ const seedBooks = [
   },
 ];
 
-const seedAdmin = [
-  {
-    name: "Martin",
-    lastname: "Elmascapo",
-    address: "calle falsa 123",
-    username: "martin",
-    email: "martin@martin.com",
-    password: "Hola123123",
-    isAdmin: true,
-  },
-  {
-    name: "Juan Domingo",
-    lastname: "Perón",
-    address: "San Vicente 123",
-    username: "juan_domingo",
-    email: "el_primer_trabajador@mail.com",
-    password: "Hola123123",
-  },
-  {
-    name: "Diego Armando",
-    lastname: "Maradona",
-    address: "Bella Vista 123",
-    username: "diegote",
-    email: "el_diego@mail.com",
-    password: "Hola123123",
-  },
-  {
-    name: "Britney",
-    lastname: "Spears",
-    address: "EEUU 123",
-    username: "freeBritney",
-    email: "britney@mail.com",
-    password: "Hola123123",
-  },
-  {
-    name: "Señor",
-    lastname: "Analfabeto",
-    address: "Muy lejos 123",
-    username: "NoSabeLeer",
-    email: "queseyo@mail.com",
-    password: "Hola123123",
-  },
-];
-
-const seedRatings = [
-  {
-    value: 4,
-    bookId: 1,
-    userId: 1,
-  },
-  {
-    value: 5,
-    bookId: 1,
-    userId: 2,
-  },
-  {
-    value: 3,
-    bookId: 1,
-    userId: 3,
-  },
-  {
-    value: 1,
-    bookId: 1,
-    userId: 4,
-  },
-];
-
-module.exports = { seedBooks, seedAdmin, seedRatings };
+module.exports = seedBooks;

@@ -11,3 +11,34 @@ h4 {
   color: black;
 }
 
+.button {
+  padding: 0 20px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 0.4em;
+  background-color: rgb(206, 206, 206);
+  transition: color 0.4s, background 0.4s;
+}
+
+.button:hover {
+  color: white;
+  background: #780000;
+}
+
+.fbButton {
+  width: auto;
+  padding: 0 20px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 0.4em;
+  background-color: rgb(206, 206, 206);
+  transition: color 0.4s, background 0.4s;
+  text-transform: uppercase;
+}
+
+.fbButton:hover {
+  color: white;
+  background: #4267b2;
+}

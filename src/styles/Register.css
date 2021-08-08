@@ -2,84 +2,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: white;
   color: black;
   text-align: center;
-  margin-top: 100px;
-  height: 85vh;
-  margin: 0;
+  height: auto;
+  margin: 4vh auto 6vh auto;
 }
 
 h3 {
   color: #780000;
 }
 
+.termsH6 {
+  margin: 0;
+}
+
 h4 {
   color: #780000;
 }
 
-/* h6 {
-  margin: 0;
-} */
-
-.botonRegister {
-  border: 1px solid #780000; /*anchura, estilo y color borde*/
-  padding: 10px; /*espacio alrededor texto*/
-  background-color: #780000; /*color botón*/
-  color: #ffffff; /*color texto*/
-  text-decoration: none; /*decoración texto*/
-  text-transform: uppercase; /*capitalización texto*/
+.registerInput {
+  height: 2.5em;
+  width: 15em;
+  border-radius: 0.4em;
+  border: 1px solid grey;
+  padding: 10px;
+  margin-bottom: 1em;
 }
 
-.registerInputStyle {
-  height: 2em;
-  width: 12em;
-  border-radius: 1em;
-  border: 1px solid;
-  padding: 0px 0px 0px 10px;
-}
-
-.registerInputStyle:focus {
+.registerInput:focus {
   outline: none;
 }
 
-.registerButtonDiv {
-  padding: 1em 0em 0em 0em;
-}
-
-.registerButton {
-  background-color: #780000;
-  color: white;
-  border: 1em;
-  border: 1px solid #780000;
-  padding: 10px;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 2em;
-  transition: color 1s, background 1s;
-  border: none;
-}
-
 .termsAndPrivacyDiv {
-  padding: 1em 0em 0em 0em;
+  margin: 0.8em auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.botonRegisterFacebook {
-  background-color: #4267b2 !important;
-  color: white !important;
-  padding: 10px;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 2em !important;
-  transition: color 1s, background 1s;
-  border: none;
+.inputCheckboxDiv {
+  margin: 5px 0px 0px 10px;
+  height: 20px;
 }
 
-.fbButtonRegisterDiv {
-  padding: 1em 0em 0em 0em;
+.localBtn {
+  margin-bottom: 15px;
 }

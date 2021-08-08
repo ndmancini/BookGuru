@@ -70,71 +70,52 @@ export default function LoginContainer() {
 
   return (
     <div className="login">
-      {/* className="container-fluid"  */}
-      <div />
-      <br />
-      <div>
-        <h3>Log In</h3>
-        {/* className="formulario container-fluid"  */}
-        <form onSubmit={handleSignIn}>
-          <br></br>
-          <label>
-            Username <br />
-            <input
-              className="loginInputStyle"
-              // className="formulario container-fluid"
-              type="text"
-              name="username"
-              // placeholder=""
-              required
-              onChange={handleChange}
-            />
-          </label>
-          <br />
-          <label>
-            Password <br />
-            <input
-              className="loginInputStyle"
-              // className="formulario container-fluid"
-              type="password"
-              name="password"
-              // placeholder=""
-              required
-              onChange={handleChange}
-            />
-          </label>
-          <br />
-          <div>
-            {validCredentials
-              ? null
-              : ["danger"].map((variant, idx) => (
-                  <Alert key={idx} variant={variant}>
-                    "You have entered an invalid username or password"
-                  </Alert>
-                ))}
+      <h3 className="loginTitle">Login</h3>
+      <form onSubmit={handleSignIn}>
+        <label>
+          Username <br />
+          <input
+            className="loginInput"
+            type="text"
+            name="username"
+            required
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Password <br />
+          <input
+            className="loginInput"
+            type="password"
+            name="password"
+            required
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <div>
+          {validCredentials
+            ? null
+            : ["danger"].map((variant, idx) => (
+                <Alert key={idx} variant={variant}>
+                  "You have entered an invalid username or password"
+                </Alert>
+              ))}
+        </div>
+        <div>
+          <div className="singleButtonLoginDiv">
+            <button className="fbButton" onClick={loginFB}>
+              Login with Facebook
+            </button>
           </div>
-          {/* <br /> */}
-          <div className="loginButtonDiv">
-            <div className="singleButtonLoginDiv">
-              <button
-                className="fb-login-button botonLoginFacebook"
-                onClick={loginFB}
-              >
-                <i className="fa fa-facebook mr-1"></i>
-                Login with Facebook
-              </button>
-            </div>
-            <div className="singleButtonLoginDiv">
-              <button
-                className="botonLogin"
-                disabled={isButtonDisable(inputSignIn)}
-              >
-                Submit
-              </button>
-            </div>
+          <div className="singleButtonLoginDiv">
+            <button className="button" disabled={isButtonDisable(inputSignIn)}>
+              Submit
+            </button>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 }

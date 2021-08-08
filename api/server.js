@@ -4,9 +4,9 @@ const routes = require("./routes");
 const db = require("./db/index");
 const PORT = process.env.PORT || 3001;
 const cors = require('cors')
-require('./db/models/index')
+//require('./db/models/index')
 const { Book, User, Rating } = require('./db/models');
-const { seedBooks, seedAdmin, seedRatings } = require('./db/seed');
+const { seedBooks, seedUsers, seedRatings } = require('./db/seed');
 
 app.use(cors());
 
@@ -17,7 +17,7 @@ app.use('/api', routes)
 
 db.sync({ force: true }).then(() => {
 
-  const userPromise = User.bulkCreate(seedAdmin, {individualHooks: true});
+  const userPromise = User.bulkCreate(seedUsers, {individualHooks: true});
   const bookPromise = Book.bulkCreate(seedBooks);
   
   Promise.all([userPromise, bookPromise])

@@ -17,7 +17,7 @@ const Books = ({ books, addToCart }) => {
               <div className="btnDiv">
                 <button
                   onClick={() => addToCart(book.id)}
-                  className="addToCartBtn"
+                  className="button addToCartBtn"
                 >
                   Add to cart
                 </button>

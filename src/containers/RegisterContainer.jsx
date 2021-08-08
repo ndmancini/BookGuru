@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { setUser } from "../store/user";
 import Alert from "react-bootstrap/Alert";
 import { useHistory } from "react-router-dom";
+import { setUser } from "../store/user";
 import isButtonDisable from "../hooks/isButtonDisable";
 import SuccessToast from "../hooks/toastNotifications/SuccessToast";
 import WarningToast from "../hooks/toastNotifications/WarningToast";
@@ -65,8 +65,8 @@ const RegisterContainer = () => {
                 lastname: response.last_name,
                 password: process.env.REACT_APP_PASSWORD_FB,
               };
-              if (!user.username)return;
-              
+              if (!user.username) return;
+
               return axios.post("/api/users/register", user).then((res) => {
                 dispatch(setUser(res.data.user));
                 localStorage.setItem("token", JSON.stringify(res.data.token));
@@ -84,18 +84,14 @@ const RegisterContainer = () => {
 
   return (
     <div className="register">
-      <div className="container-fluid" />
-      <br />
-      <h3>Welcome to BookGuru !</h3> <br />
-      <p style={{ textAlign: "center" }}>
-        Please fill in this form to create an account
-      </p>
-      <form className="formulario container-fluid" onSubmit={handleSubmit}>
+      <h3>Welcome to BookGuru!</h3> <br />
+      <p>Please fill in this form to create an account</p>
+      <form onSubmit={handleSubmit}>
         <div>
           <label>
             Name <br />
             <input
-              className="registerInputStyle"
+              className="registerInput"
               type="text"
               name="name"
               required
@@ -106,7 +102,7 @@ const RegisterContainer = () => {
           <label>
             Last Name <br />
             <input
-              className="registerInputStyle"
+              className="registerInput"
               type="text"
               required
               name="lastname"
@@ -117,7 +113,7 @@ const RegisterContainer = () => {
           <label>
             Address <br />
             <input
-              className="registerInputStyle"
+              className="registerInput"
               type="text"
               required
               name="address"
@@ -128,7 +124,7 @@ const RegisterContainer = () => {
           <label>
             Username <br />
             <input
-              className="registerInputStyle"
+              className="registerInput"
               type="text"
               required
               name="username"
@@ -139,7 +135,7 @@ const RegisterContainer = () => {
           <label>
             E-mail <br />
             <input
-              className="registerInputStyle"
+              className="registerInput"
               type="text"
               required
               name="email"
@@ -158,46 +154,42 @@ const RegisterContainer = () => {
           <label>
             Password <br />
             <input
-              className="registerInputStyle"
+              className="registerInput"
               type="password"
               required
               name="password"
               onBlur={handlerBlur}
             />
           </label>
-        </div>
-        <div>
-          {passwordValidator
-            ? null
-            : ["danger"].map((variant, idx) => (
-                <Alert key={idx} variant={variant}>
-                  "Password must contain 8 characters, 1 number and 1 capital
-                  letter"
-                </Alert>
-              ))}
-        </div>
-        <div className="termsAndPrivacyDiv">
-          <h6 style={{ margin: 0 }}>
-            By creating an account you agree to our Terms & Privacy
-          </h6>
-          <div style={{ padding: "0px 0px 0px 10px", height: "20px" }}>
-            <input required type="checkbox" />
+          <div>
+            {passwordValidator
+              ? null
+              : ["danger"].map((variant, idx) => (
+                  <Alert key={idx} variant={variant}>
+                    "Password must contain 8 characters, 1 number and 1 capital
+                    letter"
+                  </Alert>
+                ))}
           </div>
         </div>
-        <div className="fbButtonRegisterDiv">
+        <div className="termsAndPrivacyDiv">
+          <h6 className="termsH6">
+            By creating an account you agree to our Terms & Privacy
+          </h6>
+          
+            <input className="inputCheckboxDiv" required type="checkbox" />
+          
+        </div>
+        <div>
           <button
-            className="btn btn-facebook botonRegisterFacebook"
+            className="fbButton localBtn"
             onClick={registerFB}
           >
-            <i className="fa fa-facebook mr-1"></i>
             Continue with Facebook
           </button>
         </div>
         <div className="registerButtonDiv">
-          <button
-            className="registerButton"
-            disabled={isButtonDisable(inputRegistro)}
-          >
+          <button className="button" disabled={isButtonDisable(inputRegistro)}>
             Submit
           </button>
         </div>

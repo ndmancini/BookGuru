@@ -27,16 +27,5 @@
 }
 
 .addToCartBtn {
-  align-self: center;
   width: 100%;
-  padding: 8px;
-  border: none;
-  outline: none;
-  border-radius: 0.4em;
-  transition: color 0.4s, background 0.4s;
-}
-
-.addToCartBtn:hover {
-  color: white;
-  background: #780000;
 }
