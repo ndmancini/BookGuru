@@ -9,7 +9,7 @@
 <p>In order to see the website in your browser, you'll need to install PostgreSQL to run the database. You'll also need to create a database called bookguru
 </br>
 <h4>How to install PostgreSQL</h4>
-<p>Enter this <a href="https://www.postgresql.org/download/linux/ubuntu/" target=”_blank”>link</a> or run the following commands in the console</p>
+<p>Enter this <a href="https://www.postgresql.org/download/linux/ubuntu/" target=”blank”>link</a> or run the following commands in the console</p>
 </p>
 
 ```sh
