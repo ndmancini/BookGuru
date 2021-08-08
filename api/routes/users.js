@@ -18,13 +18,13 @@ router.get("/user/:userId", checkJWT, userController.user_getUserByPk)
 //gets user's old orders
 router.get("/:userId/checked", checkJWT, userController.user_checkoutOrder) 
 
-//gets all users
+//gets all users (for admin only)
 router.get("/all/:userId", checkJWT, userController.user_getAllUsers) 
 
-//deteles a user
+//deteles a user (for admin only)
 router.delete("/", checkJWT, userController.user_delete)
 
-//toggles user's isAdmin bool property
+//toggles user's isAdmin bool property (for admin only)
 router.put("/toggleAdmin", checkJWT, userController.user_toggleAdminStatus)
 
 module.exports = router;

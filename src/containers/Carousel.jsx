@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { getRandomBooks } from "../axiosRequests/booksRequests";
 import Carousel from "react-bootstrap/Carousel";
 import "../styles/Carousel.css";
@@ -21,7 +22,9 @@ const Carousel1 = ({ title, info }) => {
               {rndBooks &&
                 rndBooks.map((book, index) => {
                   return index < 8 ? (
-                    <img src={book.img} alt="..." key={book.id} />
+                    <Link to={`/books/${book.id}`} className="linkImg">
+                      <img src={book.img} alt="..." key={book.id} />
+                    </Link>
                   ) : null;
                 })}
             </div>
@@ -33,7 +36,9 @@ const Carousel1 = ({ title, info }) => {
               {rndBooks &&
                 rndBooks.map((book, index) => {
                   return index > 7 && index < 16 ? (
-                    <img src={book.img} alt="..." key={book.id} />
+                    <Link to={`/books/${book.id}`} className="linkImg">
+                      <img src={book.img} alt="..." key={book.id} />
+                    </Link>
                   ) : null;
                 })}
             </div>
@@ -45,7 +50,9 @@ const Carousel1 = ({ title, info }) => {
               {rndBooks &&
                 rndBooks.map((book, index) => {
                   return index > 15 && index < 24 ? (
-                    <img src={book.img} alt="..." key={book.id} />
+                    <Link to={`/books/${book.id}`} className="linkImg">
+                      <img src={book.img} alt="..." key={book.id} />
+                    </Link>
                   ) : null;
                 })}
             </div>

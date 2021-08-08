@@ -5,34 +5,33 @@ const bookController = require("../controllers/bookController");
 const checkJWT = require("../middlewares/jwt");
 const router = express.Router();
 
-//Creamos un libro
+//creates a new books
 router.post("/", bookController.book_create);
 
-//Devolvemos 'n' libros random
+//gets 'n' random books
 router.get("/random/:n", bookController.book_getRandomBooks);
 
-//Devolvemos un book por PK
+//find book by Id
 router.get("/id/:id", bookController.book_getById);
 
-//devolvemos todos los libros que matcheen con un título
-router.get("/title/:title", bookController.book_getByTitle);
+// router.get("/title/:title", bookController.book_getByTitle);
 
 //devolvemos todos los libros de un auto
-router.get("/author/:author", bookController.book_getByAuthor);
+// router.get("/author/:author", bookController.book_getByAuthor);
 
 //Devolvemos los libros relacionados con una categoría
 router.get("/category/:category", bookController.book_getByCategory);
 
-//Devolvemos los libros relacionados con el autor y categoria
+//get books by author or title
 router.get("/author_title/:author_title", bookController.book_getByAuthorCategory);
 
-//Borramos un libro por PK
+//delete a book by Id
 router.delete("/id/:id", checkJWT, bookController.book_delete);
 
-//Update de un libro
+//update a book
 router.put("/id/:id", checkJWT, bookController.book_update);
 
-//tramos el promedio de ratings de un libro
+//get average ratings of a book
 router.get('/ratings/:id', bookController.book_ratings)
 
 module.exports = router;

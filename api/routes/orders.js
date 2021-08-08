@@ -3,31 +3,29 @@ const router = express.Router();
 const checkJWT = require("../middlewares/jwt");
 const orderController = require("../controllers/orderController");
 
-// router.get("/", checkJWT, orderController.user_validation);
-
 //Ruta para traer todas las ordenes
-router.get("/all", checkJWT, orderController.user_validation);
+// router.get("/all", checkJWT, orderController.user_validation);
 
-//ruta llamada al agregar una order al carrito
+//adds book to cart (Creates an order)
 router.post("/", checkJWT, orderController.order_creation);
 
-//ruta llamada al comprar
+//checkout order (buy book)
 router.put("/checkout", checkJWT, orderController.order_checkout);
 
-//ruta llamada al actualizar cantidad
+//updates quantity of books in an order
 router.put("/quantity", checkJWT, orderController.order_updateQuantity);
 
-//ruta que elimina una orden del carrito
+//deletes an order of the book
 router.delete("/", orderController.order_delete);
 
-//Nos trae todas las ordenes con bought TRUE
+//gets all history of orders checked (for admin only)
 router.get("/admin/checked", checkJWT, orderController.order_getAllOrders);
 
 //Nos trae todas las ordenes con bought FALSE
-router.get(
-  "/admin/pending",
-  checkJWT,
-  orderController.order_getAllPendingOrders
-);
+// router.get(
+//   "/admin/pending",
+//   checkJWT,
+//   orderController.order_getAllPendingOrders
+// );
 
 module.exports = router;
