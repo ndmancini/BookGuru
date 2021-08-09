@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { setSingleBook } from "../store/singleBook";
-import ratingStars from "../hooks/ratingStars";
+import ratingStars from "../methods/ratingStars";
 import "../styles/SingleBook.css";
 
 const SingleBook = ({ singleBook, addToCart, rating }) => {

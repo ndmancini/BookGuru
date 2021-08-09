@@ -4,7 +4,7 @@ import {
   deleteUserAxios,
   toggleAdminAxios,
 } from "../axiosRequests/usersRequests";
-import SuccessToast from "../hooks/toastNotifications/SuccessToast";
+import SuccessToast from "../toastNotifications/SuccessToast";
 import Users from "../components/Users";
 import "../styles/Users.css";
 

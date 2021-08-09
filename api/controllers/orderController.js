@@ -65,12 +65,5 @@ module.exports = {
       include: [Book, User],
     }).then((checkedOrders) => res.status(200).send(checkedOrders));
   },
-
-  // order_getAllPendingOrders: function (req, res) {
-  //   Order.findAll({
-  //     where: { bought: false },
-  //     include: Book,
-  //   }).then((pendingOrders) => res.status(200).send(pendingOrders));
-  // },
   
 };

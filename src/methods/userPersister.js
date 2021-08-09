@@ -1,6 +1,6 @@
-const userPersisterHook = () => {
+const userPersister = () => {
     const storageUser = JSON.parse(localStorage.getItem("user")) || {};
     return storageUser
 }
 
-export default userPersisterHook;
+export default userPersister;

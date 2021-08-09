@@ -6,14 +6,15 @@ import {
   updateQuantity,
   checkoutOrder,
 } from "../axiosRequests/ordersRequests";
-import cartTotalPrice from "../hooks/cartTotalPrice";
-import SuccessToast from "../hooks/toastNotifications/SuccessToast";
-import WarningToast from "../hooks/toastNotifications/WarningToast";
+import cartTotalPrice from "../methods/cartTotalPrice";
+import SuccessToast from "../toastNotifications/SuccessToast";
+import WarningToast from "../toastNotifications/WarningToast";
 import "../styles/Cart.css";
 
 const CartContainer = () => {
   const [cart, setCart] = React.useState([]);
   const user = JSON.parse(localStorage.getItem("user"));
+
   React.useEffect(() => {
     getUserCart().then((res) => setCart(res.data));
   }, []);
@@ -43,7 +44,6 @@ const CartContainer = () => {
 
   return (
     <div className="cart">
-      {/* onClick={() => history.push("/previous")} */}
       <div className="previousOrdersDiv">
         <Link
           className="sub-link"
@@ -75,8 +75,6 @@ const CartContainer = () => {
                   <td>{data.book.title}</td>
                   <td>{data.book.author}</td>
                   <td>
-                    {/* onChange={quantityChange(data.quantity, data.orderId)} */}
-                    {/* <input>data.quantity</input> */}
                     <div className="addAndRemoveButtonsDiv">
                       <button
                         className="button-cart"

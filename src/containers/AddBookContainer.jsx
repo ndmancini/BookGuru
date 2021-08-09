@@ -1,15 +1,17 @@
-import React from "react";
-import "../styles/SingleBook.css";
-import { useState } from "react";
-import AddBook from "../components/AddBook";
+import React, { useState } from "react";
+// import "../styles/SingleBook.css";
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
+import AddBook from "../components/AddBook";
 import { postBookAxios } from "../axiosRequests/booksRequests";
-import SuccessToast from "../hooks/toastNotifications/SuccessToast";
-import WarningToast from "../hooks/toastNotifications/WarningToast"
+import SuccessToast from "../toastNotifications/SuccessToast";
+import WarningToast from "../toastNotifications/WarningToast";
 
 const AddBookContainer = () => {
   const [newBookProps, setNewBookProps] = useState({});
   const history = useHistory();
+
+  const { user } = useSelector((state) => state);
 
   const changeHandler = (e) => {
     e.preventDefault();
@@ -38,11 +40,15 @@ const AddBookContainer = () => {
   ];
 
   return (
-    <AddBook
-      bookPropsArray={bookPropsArray}
-      changeHandler={changeHandler}
-      submitHandler={submitHandler}
-    />
+    <div>
+      {user.isAdmin ? (
+        <AddBook
+          bookPropsArray={bookPropsArray}
+          changeHandler={changeHandler}
+          submitHandler={submitHandler}
+        />
+      ) : null}
+    </div>
   );
 };
 

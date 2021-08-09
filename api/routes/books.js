@@ -14,16 +14,11 @@ router.get("/random/:n", bookController.book_getRandomBooks);
 //find book by Id
 router.get("/id/:id", bookController.book_getById);
 
-// router.get("/title/:title", bookController.book_getByTitle);
-
-//devolvemos todos los libros de un auto
-// router.get("/author/:author", bookController.book_getByAuthor);
-
 //Devolvemos los libros relacionados con una categoría
 router.get("/category/:category", bookController.book_getByCategory);
 
 //get books by author or title
-router.get("/author_title/:author_title", bookController.book_getByAuthorCategory);
+router.get("/author_title/:author_title", bookController.book_getByTitleOrAuthor);
 
 //delete a book by Id
 router.delete("/id/:id", checkJWT, bookController.book_delete);

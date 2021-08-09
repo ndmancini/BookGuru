@@ -3,19 +3,18 @@ import "../styles/SingleBook.css";
 import { useState } from "react";
 import BooksEdit from "../components/BooksEdit";
 import { useHistory } from "react-router-dom";
-import { updateSingleBook, deleteBookAxios } from "../axiosRequests/booksRequests";
-import { useDispatch } from "react-redux";
-import { setDeletedBookBoolean } from "../store/deletedBookBoolean";
-import SuccessToast from "../hooks/toastNotifications/SuccessToast";
-import WarningToast from "../hooks/toastNotifications/WarningToast";
-import store from "../store/store";
+import {
+  updateSingleBook,
+  deleteBookAxios,
+} from "../axiosRequests/booksRequests";
+import SuccessToast from "../toastNotifications/SuccessToast";
+import WarningToast from "../toastNotifications/WarningToast";
 
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const BooksEditContainer = () => {
-  const input = useSelector((state) => state.input);
+  // const input = useSelector((state) => state.input);
   const [bookUpdatedProps, setBookUpdatedProps] = useState({});
-  const dispatch = useDispatch();
   const history = useHistory();
 
   const changeHandler = (e) => {
@@ -40,14 +39,8 @@ const BooksEditContainer = () => {
   const deleteBook = (e, bookId) => {
     e.preventDefault();
     deleteBookAxios(bookId).then(() => {
-      if (input === "") {
-        dispatch(setDeletedBookBoolean(!store.getState().deletedBookBoolean));
-        history.push("/books");
-        SuccessToast("🦥Book deleted!🦥");
-      } else {
-        dispatch(setDeletedBookBoolean(!store.getState().deletedBookBoolean));
-        SuccessToast("🦥Book deleted!🦥");
-      }
+      history.push("/");
+      SuccessToast("🦥Book deleted!🦥");
     });
   };
 

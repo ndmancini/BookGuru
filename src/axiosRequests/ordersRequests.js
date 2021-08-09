@@ -1,6 +1,6 @@
 import axios from "axios";
-import SuccessToast from "../hooks/toastNotifications/SuccessToast";
-import WarningToast from "../hooks/toastNotifications/WarningToast";
+import SuccessToast from "../toastNotifications/SuccessToast";
+import WarningToast from "../toastNotifications/WarningToast";
 
 export function getAllOrders() {
   const token = JSON.parse(localStorage.getItem("token"));

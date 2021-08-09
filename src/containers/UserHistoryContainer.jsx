@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { getUserPrevious } from "../axiosRequests/usersRequests";
 import { addRatingAxios } from "../axiosRequests/ratingsRequests";
 import Rating from "../components/Rating";
-import SuccessToast from "../hooks/toastNotifications/SuccessToast";
-import WarningToast from "../hooks/toastNotifications/WarningToast";
+import SuccessToast from "../toastNotifications/SuccessToast";
+import WarningToast from "../toastNotifications/WarningToast";
 import "../styles/Cart.css";
 
 const UserHistoryContainer = () => {

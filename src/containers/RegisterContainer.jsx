@@ -4,9 +4,9 @@ import { useDispatch } from "react-redux";
 import Alert from "react-bootstrap/Alert";
 import { useHistory } from "react-router-dom";
 import { setUser } from "../store/user";
-import isButtonDisable from "../hooks/isButtonDisable";
-import SuccessToast from "../hooks/toastNotifications/SuccessToast";
-import WarningToast from "../hooks/toastNotifications/WarningToast";
+import isButtonDisable from "../methods/isButtonDisable";
+import SuccessToast from "../toastNotifications/SuccessToast";
+import WarningToast from "../toastNotifications/WarningToast";
 import "../styles/Register.css";
 
 const RegisterContainer = () => {

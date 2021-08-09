@@ -5,8 +5,8 @@ import { setUser } from "../store/user";
 import "../styles/LogIn.css";
 import Alert from "react-bootstrap/Alert";
 import { useHistory } from "react-router-dom";
-import isButtonDisable from "../hooks/isButtonDisable";
-import SuccessToast from "../hooks/toastNotifications/SuccessToast";
+import isButtonDisable from "../methods/isButtonDisable";
+import SuccessToast from "../toastNotifications/SuccessToast";
 
 export default function LoginContainer() {
   const dispatch = useDispatch();

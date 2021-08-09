@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUser } from "../store/user";
-import userPersisterHook from "../hooks/userPersisterHook";
+import userPersister from "../methods/userPersister";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -18,7 +18,6 @@ import BooksContainer from "./BooksContainer";
 import CartContainer from "./CartContainer";
 import SingleBookContainer from "./SingleBookContainer";
 import UserHistoryContainer from "./UserHistoryContainer";
-import CategoriesContainer from "./CategoriesContainer";
 import UsersContainer from "./UsersContainer";
 import HistoryContainer from "./HistoryContainer";
 import Contact from "../components/Contact";
@@ -36,7 +35,7 @@ import "primeicons/primeicons.css";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setUser(userPersisterHook()));
+    dispatch(setUser(userPersister()));
   }, [dispatch]);
 
   return (
@@ -77,13 +76,6 @@ const App = () => {
 
         <Route path="/cart" component={CartContainer} />
         <Route path="/user_history" component={UserHistoryContainer} />
-
-        <Route
-          path="/category/:category"
-          render={({ match }) => (
-            <CategoriesContainer typeCategory={match.params.category} />
-          )}
-        />
 
         <Route path="/history" component={HistoryContainer} />
         <Route path="/contact" component={Contact} />
