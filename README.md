@@ -69,8 +69,7 @@ Thanks for visiting our project! Feel free to navigate through books and users.
 
 👤 **Matias Carou, Nicolas Mancini, Luis Osorio, Paula Binimelis, Pilar Dubiau y Alejandro Rusinoff**
 
-- Github: [@matiascarou](https://github.com/matiascarou),  [@pilardubiau](https://github.com/pilardubiau), [@adrianrusinoff
-adrianrusinoff](https://github.com/adrianrusinoff), [@PaulaBi](http://github/paulabi), [@Zocratexta](http://github/zocratexta)
+- Github: [@matiascarou](https://github.com/matiascarou),  [@pilardubiau](https://github.com/pilardubiau), [@adrianrusinoff](https://github.com/adrianrusinoff), [@PaulaBi](http://github/paulabi), [@Zocratexta](http://github/zocratexta)
 ## Show your support
 
 Give a ⭐️ if this project helped you!
